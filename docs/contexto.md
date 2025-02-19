@@ -1,51 +1,54 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Este documento apresenta o contexto para o desenvolvimento do Sistema para Coworking, abordando sua justificativa, objetivos e público-alvo. O projeto visa criar uma plataforma tecnológica que facilite a gestão e a reserva de espaços compartilhados, oferecendo uma experiência otimizada tanto para usuários quanto para administradores.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Muitos espaços de coworking enfrentam desafios na organização e gestão de reservas, frequentemente utilizando processos manuais ou sistemas fragmentados. Isso pode resultar em agendamentos conflitantes, falta de transparência na disponibilidade de recursos e dificuldades na comunicação com os usuários, impactando negativamente a eficiência operacional e a satisfação dos clientes.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
-
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+O Sistema para Coworking tem como objetivo principal fornecer uma plataforma integrada (web e mobile) que permita aos usuários visualizar e reservar salas e mesas de acordo com a disponibilidade em tempo real. Além disso, oferecerá um painel administrativo para que os gestores dos espaços possam monitorar e gerenciar as reservas de forma eficaz.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+O mercado de coworking no Brasil tem experimentado um crescimento significativo nos últimos anos. De acordo com o Censo Coworking 2024, realizado pela Woba, o número de espaços de coworking no país aumentou aproximadamente 20% em um ano, totalizando 2.986 espaços ativos. Esse crescimento é impulsionado pela demanda por ambientes de trabalho flexíveis, especialmente devido à popularização do trabalho híbrido e remoto.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Além disso, a pesquisa indica que 91% dos coworkings brasileiros se posicionam como multidisciplinares, atendendo profissionais de diversos segmentos. Isso ressalta a necessidade de sistemas eficientes que possam gerenciar a diversidade de usuários e suas respectivas demandas.
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+A implementação de uma plataforma integrada para gestão de reservas não apenas otimiza a operação dos espaços, mas também melhora a experiência do usuário, promovendo maior transparência e facilidade no processo de agendamento.
+
+REFERÊNCIA: <https://www.terra.com.br/economia/meu-negocio/censo-do-coworking-2024-revela-crescimento-do-setor-no-brasil%2C6e44c008ed53d31c86b4a3dc4e18b8dfx2t4r92o.html?utm_source=chatgpt.com>
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+O sistema será direcionado para os seguintes perfis:
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+Profissionais Autônomos e Freelancers: Indivíduos que buscam um ambiente profissional fora de casa para aumentar sua produtividade e expandir sua rede de contatos. Geralmente, possuem familiaridade com ferramentas tecnológicas e valorizam a flexibilidade e o networking proporcionados pelos coworkings.
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Pequenas Empresas e Startups: Empresas em fase inicial ou em crescimento que necessitam de espaços de trabalho flexíveis e escaláveis. Esses usuários frequentemente procuram soluções que ofereçam infraestrutura completa sem os altos custos de um escritório próprio.
+
+Empresas Adotando Modelos Híbridos/Remotos: Organizações estabelecidas que implementaram políticas de trabalho remoto ou híbrido e buscam espaços para reuniões presenciais, treinamentos ou para colaboradores que preferem não trabalhar exclusivamente de casa.
+
+Administradores de Espaços de Coworking: Profissionais responsáveis pela gestão e operação dos coworkings, que necessitam de ferramentas eficientes para gerenciar reservas, pagamentos e a comunicação com os membros.
+
+De acordo com estudos, a idade média dos usuários de coworking no Brasil é de 33 anos, com uma distribuição equilibrada entre homens e mulheres. As áreas de atuação mais comuns incluem tecnologia, comunicação, design, administração e serviços. Esses profissionais geralmente possuem nível superior completo ou pós-graduação e buscam nos coworkings não apenas um espaço físico, mas também oportunidades de networking e colaboração.
+
+REFERÊNCIA: <https://clubcoworking.com.br/perfil-do-coworker-qual-e/?utm_source=chatgpt.com>
 
 # Especificações do Projeto
+
+--- Escopo do Projeto ---
+O projeto contempla o desenvolvimento de:
+Backend e API: Implementação em C# e ASP.NET, responsável pela lógica de negócios e comunicação com o banco de dados.
+Banco de Dados: Uso do SQL Server Express para armazenar informações sobre usuários, reservas e disponibilidade de salas/mesas.
+Frontend: Aplicação web desenvolvida em React.js, proporcionando uma interface intuitiva para os usuários realizarem reservas.
+Aplicativo Mobile: Desenvolvido em Flutter, permitindo que os usuários façam reservas diretamente pelo smartphone.
+--- Funcionalidades Principais ---
+Cadastro e autenticação de usuários
+Visualização de salas/mesas disponíveis
+Reserva e cancelamento de espaços
+Painel administrativo para gerenciamento das reservas
+Notificações e confirmação de agendamentos
 
 ## Requisitos
 
