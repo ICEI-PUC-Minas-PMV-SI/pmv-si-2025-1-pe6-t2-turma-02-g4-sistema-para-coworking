@@ -50,38 +50,44 @@ Reserva e cancelamento de espaços
 Painel administrativo para gerenciamento das reservas
 Notificações e confirmação de agendamentos
 
-## Requisitos
+## Requisitos do Sistema para Coworking
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
+## 1. Requisitos Funcionais (RF)
+Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer.
 
-### Requisitos Funcionais
+| Código  | Descrição | Prioridade |
+|---------|-----------|------------|
+| **RF01** | O sistema deve permitir o cadastro, login e autenticação de usuários. | **Alta** |
+| **RF02** | O usuário deve poder visualizar salas e mesas disponíveis para reserva. | **Alta** |
+| **RF03** | O usuário deve poder realizar reservas de salas e mesas, selecionando data e horário. | **Alta** |
+| **RF04** | O usuário deve poder cancelar ou modificar suas reservas. | **Média** |
+| **RF05** | O sistema deve exibir notificações no site/aplicativo sobre confirmação, cancelamento e lembretes de reservas. | **Média** |
+| **RF06** | O administrador deve poder gerenciar usuários e suas permissões. | **Alta** |
+| **RF07** | O administrador deve poder visualizar e gerenciar reservas. | **Alta** |
+| **RF08** | O sistema deve permitir o cadastro e edição de salas/mesas, incluindo capacidade e recursos disponíveis. | **Alta** |
+| **RF09** | O sistema deve oferecer relatórios sobre ocupação e uso dos espaços. | **Baixa** |
+| **RF10** | O sistema deve permitir o pagamento online das reservas, caso necessário. | **Baixa** |
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+---
 
-### Requisitos não Funcionais
+## 2. Requisitos Não Funcionais (RNF)
+Os requisitos não funcionais definem características e restrições técnicas do sistema.
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+| Código  | Descrição | Prioridade |
+|---------|-----------|------------|
+| **RNF01** | O sistema deve ser desenvolvido com **C# e ASP.NET** no backend. | **Alta** |
+| **RNF02** | O frontend da aplicação web deve ser desenvolvido em **React.js**. | **Alta** |
+| **RNF03** | O aplicativo mobile deve ser desenvolvido em **Flutter**. | **Alta** |
+| **RNF04** | O banco de dados deve ser o **SQL Server Express**. | **Alta** |
+| **RNF05** | O sistema deve suportar **no mínimo 1.000 usuários simultâneos**. | **Média** |
+| **RNF06** | A interface do sistema deve ser responsiva e acessível em dispositivos móveis e desktop. | **Alta** |
+| **RNF07** | O tempo de resposta para ações do usuário (ex: reservas) deve ser inferior a **2 segundos**. | **Alta** |
+| **RNF08** | O sistema deve garantir **segurança de dados**, com criptografia de senhas e comunicação segura (SSL/TLS). | **Alta** |
+| **RNF09** | O sistema deve ser compatível com os navegadores **Chrome, Firefox, Edge e Safari**. | **Média** |
+| **RNF10** | O sistema deve ter um **design intuitivo e acessível**, seguindo diretrizes de UX/UI. | **Média** |
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+
 
 ## Restrições
 
