@@ -79,12 +79,10 @@ Os requisitos não funcionais definem características e restrições técnicas 
 | **RNF02** | O frontend da aplicação web deve ser desenvolvido em **React.js**. | **Alta** |
 | **RNF03** | O aplicativo mobile deve ser desenvolvido em **Flutter**. | **Alta** |
 | **RNF04** | O banco de dados deve ser o **SQL Server Express**. | **Alta** |
-| **RNF05** | O sistema deve suportar **no mínimo 1.000 usuários simultâneos**. | **Média** |
-| **RNF06** | A interface do sistema deve ser responsiva e acessível em dispositivos móveis e desktop. | **Alta** |
-| **RNF07** | O tempo de resposta para ações do usuário (ex: reservas) deve ser inferior a **2 segundos**. | **Alta** |
-| **RNF08** | O sistema deve garantir **segurança de dados**, com criptografia de senhas e comunicação segura (SSL/TLS). | **Alta** |
-| **RNF09** | O sistema deve ser compatível com os navegadores **Chrome, Firefox, Edge e Safari**. | **Média** |
-| **RNF10** | O sistema deve ter um **design intuitivo e acessível**, seguindo diretrizes de UX/UI. | **Média** |
+| **RNF05** | A interface do sistema deve ser responsiva e acessível em dispositivos móveis e desktop. | **Alta** |
+| **RNF06** | O sistema deve garantir **segurança de dados**, com criptografia de senhas e comunicação segura (SSL/TLS). | **Alta** |
+| **RNF07** | O sistema deve ser compatível com os navegadores **Chrome, Firefox, Edge e Safari**. | **Média** |
+| **RNF08** | O sistema deve ter um **design intuitivo e acessível**, seguindo diretrizes de UX/UI. | **Média** |
 
 
 
