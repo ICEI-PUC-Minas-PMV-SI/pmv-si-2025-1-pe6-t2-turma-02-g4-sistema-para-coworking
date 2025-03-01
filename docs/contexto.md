@@ -112,8 +112,8 @@ Banco de Dados: Uso do SQL Server Express para armazenar informações sobre usu
 Frontend: Aplicação web desenvolvida em React.js, proporcionando uma interface intuitiva para os usuários realizarem reservas.
 Aplicativo Mobile: Desenvolvido em Flutter, permitindo que os usuários façam reservas diretamente pelo smartphone.
 
-
 Aqui está um diagrama ilustrando como as tecnologias do sistema de reservas para coworking estão relacionadas. Ele mostra o fluxo de interação do usuário desde o frontend (web ou mobile) até o backend e o banco de dados, retornando uma resposta ao usuário.
+![arq](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/Documenta%C3%A7%C3%A3o-de-Contexto/docs/img/Diagrama%20linguagens.png)
 
 
 ## Hospedagem
