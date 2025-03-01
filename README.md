@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO
+# Sistema de Gestão para Coworking
 
 `CURSO: Sistemas de Informação`
 
@@ -12,16 +12,15 @@ O frontend web, desenvolvido com XXXXXX, oferecerá uma interface intuitiva para
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Fillipe Serafim
+* Fillipe Gabriel Izidorio Serafim
 * Josenilson Silva Santos
-* Nicolas
+* Nicollas Kawan Pedroso Venancio de Oliveira
 * Túlio Almeida Lopes
-* Vinícius Nominato
+* Vinícius de Paula Nominato Marques
 
 ## Orientador
 
-* Nome completo do professor 1
+* Kleber Jacques Ferreira de Souza
 
 # Planejamento
 
