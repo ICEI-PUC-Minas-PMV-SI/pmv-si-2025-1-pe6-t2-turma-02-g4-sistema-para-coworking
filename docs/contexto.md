@@ -35,78 +35,67 @@ De acordo com estudos, a idade média dos usuários de coworking no Brasil é de
 
 REFERÊNCIA: <https://clubcoworking.com.br/perfil-do-coworker-qual-e/?utm_source=chatgpt.com>
 
-# Especificações do Projeto
 
---- Escopo do Projeto ---
-O projeto contempla o desenvolvimento de:
-Backend e API: Implementação em C# e ASP.NET, responsável pela lógica de negócios e comunicação com o banco de dados.
-Banco de Dados: Uso do SQL Server Express para armazenar informações sobre usuários, reservas e disponibilidade de salas/mesas.
-Frontend: Aplicação web desenvolvida em React.js, proporcionando uma interface intuitiva para os usuários realizarem reservas.
-Aplicativo Mobile: Desenvolvido em Flutter, permitindo que os usuários façam reservas diretamente pelo smartphone.
---- Funcionalidades Principais ---
-Cadastro e autenticação de usuários
-Visualização de salas/mesas disponíveis
-Reserva e cancelamento de espaços
-Painel administrativo para gerenciamento das reservas
-Notificações e confirmação de agendamentos
+
+# Especificações do Projeto
 
 ## Requisitos do Sistema para Coworking
 
 ## 1. Requisitos Funcionais (RF)
 Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer.
 
-| Código  | Descrição | Prioridade |
-|---------|-----------|------------|
-| **RF01** | O sistema deve permitir o cadastro, login e autenticação de usuários. | **Alta** |
-| **RF02** | O usuário deve poder visualizar salas e mesas disponíveis para reserva. | **Alta** |
-| **RF03** | O usuário deve poder realizar reservas de salas e mesas, selecionando data e horário. | **Alta** |
-| **RF04** | O usuário deve poder cancelar ou modificar suas reservas. | **Média** |
-| **RF05** | O sistema deve exibir notificações no site/aplicativo sobre confirmação, cancelamento e lembretes de reservas. | **Média** |
-| **RF06** | O administrador deve poder gerenciar usuários e suas permissões. | **Alta** |
-| **RF07** | O administrador deve poder visualizar e gerenciar reservas. | **Alta** |
-| **RF08** | O sistema deve permitir o cadastro e edição de salas/mesas, incluindo capacidade e recursos disponíveis. | **Alta** |
-| **RF09** | O sistema deve oferecer relatórios sobre ocupação e uso dos espaços. | **Baixa** |
-| **RF10** | O sistema deve permitir o pagamento online das reservas, caso necessário. | **Baixa** |
-
----
+| Código  | Descrição | Prioridade | Responsável |
+|---------|-----------|------------|-------------|
+| **RF01** | O sistema deve permitir o CRUD de usuários. | **Alta** | Fillipe |
+| **RF02** | O sistema deve permitir o CRUD de salas e mesas, incluindo capacidade e recursos disponíveis. | **Alta** | Túlio |
+| **RF03** | O sistema deve permitir o CRUD de reservas de salas e mesas. | **Alta** | Nicollas |
+| **RF04** | O sistema deve permitir a vizualização de salas e mesas disponíveis para reserva com data e hora. | **Alta** | Vinicius |
+| **RF05** | O sistema deve exibir notificações no site/aplicativo sobre confirmação, cancelamento e lembretes de reservas. | **Média** | Josenilson |
+| **RF06** | O administrador deve poder gerenciar usuários e suas permissões. | **Alta** | Fillipe |
+| **RF07** | O administrador deve poder visualizar e gerenciar reservas. | **Alta** | Nicollas |
+| **RF08** | O sistema deve oferecer relatórios sobre ocupação e uso dos espaços. | **Baixa** | Tulio |
+| **RF09** | O sistema deve permitir o pagamento online das reservas, caso necessário. | **Baixa** | Vinicius |
 
 ## 2. Requisitos Não Funcionais (RNF)
 Os requisitos não funcionais definem características e restrições técnicas do sistema.
 
 | Código  | Descrição | Prioridade |
 |---------|-----------|------------|
-| **RNF01** | O sistema deve ser desenvolvido com **C# e ASP.NET** no backend. | **Alta** |
-| **RNF02** | O frontend da aplicação web deve ser desenvolvido em **React.js**. | **Alta** |
-| **RNF03** | O aplicativo mobile deve ser desenvolvido em **Flutter**. | **Alta** |
-| **RNF04** | O banco de dados deve ser o **SQL Server Express**. | **Alta** |
-| **RNF05** | O sistema deve suportar **no mínimo 1.000 usuários simultâneos**. | **Média** |
-| **RNF06** | A interface do sistema deve ser responsiva e acessível em dispositivos móveis e desktop. | **Alta** |
-| **RNF07** | O tempo de resposta para ações do usuário (ex: reservas) deve ser inferior a **2 segundos**. | **Alta** |
-| **RNF08** | O sistema deve garantir **segurança de dados**, com criptografia de senhas e comunicação segura (SSL/TLS). | **Alta** |
-| **RNF09** | O sistema deve ser compatível com os navegadores **Chrome, Firefox, Edge e Safari**. | **Média** |
-| **RNF10** | O sistema deve ter um **design intuitivo e acessível**, seguindo diretrizes de UX/UI. | **Média** |
-
-
-
+| **RNF01** | O sistema deve suportar **no mínimo 1.000 usuários simultâneos**. | **Média** |
+| **RNF02** | A interface do sistema deve ser responsiva e acessível em dispositivos móveis e desktop. | **Alta** |
+| **RNF03** | O tempo de resposta para ações do usuário (ex: reservas) deve ser inferior a **2 segundos**. | **Alta** |
+| **RNF04** | O sistema deve garantir **segurança de dados**, com criptografia de senhas e comunicação segura (SSL/TLS). | **Alta** |
+| **RNF05** | O sistema deve ser compatível com os navegadores **Chrome, Firefox, Edge e Safari**. | **Média** |
+| **RNF06** | O sistema deve ter um **design intuitivo e acessível**, seguindo diretrizes de UX/UI. | **Média** |
 
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+| ID  | Restrição |
+|-----|---------------------------------------------------------------|
+| **R01** | O sistema deve ser hospedado em um ambiente que suporte um mínimo de 1.000 usuários simultâneos. |
+| **R02** | Deve ser implementado um banco de dados relacional que suporte transações simultâneas e integridade referencial. |
+| **R03** | O sistema deve estar disponível 24/7, garantindo alta disponibilidade para os usuários. |
+| **R04** | O sistema deve seguir normas de proteção de dados e privacidade, como a **LGPD (Lei Geral de Proteção de Dados)**. |
+| **R05** | Os relatórios sobre ocupação e uso dos espaços devem ser gerados em formato **visual e acessível** para facilitar a análise de dados. |
+| **R06** | O projeto deverá ser entregue até o final do semestre |
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 # Catálogo de Serviços
 
-Descreva aqui todos os serviços que serão disponibilizados pelo seu projeto, detalhando suas características e funcionalidades.
+| **Serviço** | **Descrição** | **Funcionalidades** | **Restrições** |
+|-------------|-------------|--------------------|---------------|
+| **Gestão de Usuários** | Permite que usuários se cadastrem, gerenciem suas informações e acessem o sistema com diferentes níveis de permissão. | ✔ Cadastro de novos usuários com autenticação segura. <br> ✔ Login e recuperação de senha. <br> ✔ Atualização de informações pessoais. <br> ✔ Definição de permissões para administradores e usuários comuns. | 🔒 Apenas administradores podem alterar permissões de usuários. <br> 🔒 As senhas devem ser armazenadas com criptografia. <br> 🔒 O acesso ao sistema deve ser feito via autenticação segura. |
+| **Gestão de Salas e Mesas** | Permite que administradores cadastrem, editem e removam salas e mesas disponíveis para reserva. | ✔ Cadastro de salas e mesas, incluindo capacidade e recursos disponíveis (Wi-Fi, projetores, lousas digitais etc.). <br> ✔ Atualização de informações sobre as salas e mesas. <br> ✔ Remoção de espaços que não estarão mais disponíveis. | 🔒 Apenas administradores podem cadastrar ou remover salas e mesas. <br> 🔒 As informações devem estar sempre sincronizadas para evitar conflitos de reserva. |
+| **Reservas de Salas e Mesas** | Permite que usuários realizem reservas de salas e mesas com data e hora específicas. | ✔ Consulta de disponibilidade de salas e mesas. <br> ✔ Realização de reservas com data e hora. <br> ✔ Cancelamento e modificação de reservas. | 🔒 As reservas devem ser validadas em tempo real para evitar conflitos. <br> 🔒 Apenas o usuário que realizou a reserva pode cancelá-la ou modificá-la. |
+| **Notificações no Site/Aplicativo** | O sistema exibirá notificações internas para manter os usuários informados sobre suas reservas. | ✔ Notificação de confirmação de reserva. <br> ✔ Lembretes de reserva próximos ao horário agendado. <br> ✔ Notificação sobre cancelamento ou modificação da reserva. | 🔒 As notificações serão apenas no site/aplicativo, sem uso de SMS ou e-mail. |
+| **Gestão de Reservas pelo Administrador** | Os administradores terão acesso a um painel para visualizar e gerenciar todas as reservas do sistema. | ✔ Consulta de todas as reservas realizadas no coworking. <br> ✔ Cancelamento de reservas em casos necessários. | 🔒 Apenas administradores podem visualizar e modificar reservas de outros usuários. |
+| **Relatórios de Ocupação e Uso** | Geração de relatórios detalhados sobre a ocupação dos espaços e padrões de uso. | ✔ Geração de relatórios em formato visual e acessível. <br> ✔ Exibição de estatísticas sobre salas mais reservadas, horários de pico, taxa de ocupação, etc. | 🔒 Apenas administradores terão acesso aos relatórios completos. |
+| **Pagamento Online (Opcional)** | Possibilidade de realizar pagamentos online para reservas, caso o coworking tenha planos pagos. | ✔ Integração com meios de pagamento online (cartão de crédito, Pix, boleto). <br> ✔ Histórico de pagamentos e recibos. | 🔒 O serviço de pagamento será opcional e ativado apenas se necessário. |
+
+
 
 # Arquitetura da Solução
 
@@ -117,9 +106,15 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+O projeto contempla o desenvolvimento de:
+Backend e API: Implementação em C# e ASP.NET, responsável pela lógica de negócios e comunicação com o banco de dados.
+Banco de Dados: Uso do SQL Server Express para armazenar informações sobre usuários, reservas e disponibilidade de salas/mesas.
+Frontend: Aplicação web desenvolvida em React.js, proporcionando uma interface intuitiva para os usuários realizarem reservas.
+Aplicativo Mobile: Desenvolvido em Flutter, permitindo que os usuários façam reservas diretamente pelo smartphone.
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+
+Aqui está um diagrama ilustrando como as tecnologias do sistema de reservas para coworking estão relacionadas. Ele mostra o fluxo de interação do usuário desde o frontend (web ou mobile) até o backend e o banco de dados, retornando uma resposta ao usuário.
+
 
 ## Hospedagem
 
