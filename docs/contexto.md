@@ -99,9 +99,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 # Arquitetura da Solução
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
+A arquitetura do sistema será baseada em uma abordagem cliente-servidor, utilizando uma estrutura multi-camada para garantir modularidade, escalabilidade e manutenibilidade. O sistema será composto pelas camadas Apresentação (Frontend e Mobile), de Aplicação (Backend e API) e de Dados (Banco de Dados).
 
-![arq](https://github.com/user-attachments/assets/b9402e05-8445-47c3-9d47-f11696e38a3d)
+![arq](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/Documenta%C3%A7%C3%A3o-de-Contexto/docs/img/arquitetura%20ilustracao.png)
 
 
 ## Tecnologias Utilizadas
