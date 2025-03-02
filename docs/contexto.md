@@ -101,7 +101,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 A arquitetura do sistema será baseada em uma abordagem cliente-servidor, utilizando uma estrutura multi-camada para garantir modularidade, escalabilidade e manutenibilidade. O sistema será composto pelas camadas Apresentação (Frontend e Mobile), de Aplicação (Backend e API) e de Dados (Banco de Dados).
 
-![arq](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/Documenta%C3%A7%C3%A3o-de-Contexto/docs/img/arquitetura%20ilustracao.png)
+![arq](https://github.com/ICEI-PUC-Minas-PMV-SI/ppmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/Documenta%C3%A7%C3%A3o-de-Contexto/docs/img/arquitetura%20ilustracao.png)
 
 
 ## Tecnologias Utilizadas
@@ -113,7 +113,7 @@ Frontend: Aplicação web desenvolvida em React.js, proporcionando uma interface
 Aplicativo Mobile: Desenvolvido em Flutter, permitindo que os usuários façam reservas diretamente pelo smartphone.
 
 Aqui está um diagrama ilustrando como as tecnologias do sistema de reservas para coworking estão relacionadas. Ele mostra o fluxo de interação do usuário desde o frontend (web ou mobile) até o backend e o banco de dados, retornando uma resposta ao usuário.
-![arq](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/Documenta%C3%A7%C3%A3o-de-Contexto/docs/img/Diagrama%20linguagens.png)
+![arq](https://github.com/ICEI-PUC-Minas-PMV-SI/ppmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/Documenta%C3%A7%C3%A3o-de-Contexto/docs/img/Diagrama%20linguagens.png)
 
 
 ## Hospedagem
