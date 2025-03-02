@@ -6,7 +6,9 @@
 
 `SEMESTRE: 6º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto visa desenvolver um sistema completo para gerenciar espaços de coworking, oferecendo uma plataforma integrada composta por backend, frontend web e aplicativo móvel. O backend será responsável por toda a lógica de negócios, autenticação de usuários e controle de reservas, . Ele será desenvolvido, garantindo escalabilidade e segurança. O banco de dados, armazenará informações sobre usuários, disponibilidade de salas e histórico de reservas. Além disso, será implementado um sistema de notificações via e-mail e push para manter os usuários informados sobre suas reservas.
+
+O frontend web oferecerá uma interface intuitiva para administradores e clientes gerenciarem seus espaços e agendamentos. O aplicativo móvel, disponível para Android e iOS, permitirá que os usuários façam reservas, consultem horários disponíveis, e recebam notificações em tempo real. A interface será responsiva e otimizada para oferecer uma experiência fluida, independentemente do dispositivo utilizado.
 
 ## Integrantes
 
