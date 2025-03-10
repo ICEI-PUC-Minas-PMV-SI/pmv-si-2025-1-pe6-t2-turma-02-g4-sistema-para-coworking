@@ -68,6 +68,7 @@ Os requisitos não funcionais definem características e restrições técnicas 
 | **RNF05** | O sistema deve ser compatível com os navegadores **Chrome, Firefox, Edge e Safari**. | **Média** |
 | **RNF06** | O sistema deve ter um **design intuitivo e acessível**, seguindo diretrizes de UX/UI. | **Média** |
 
+
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
