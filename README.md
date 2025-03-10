@@ -1,4 +1,4 @@
-# Sistema de Gestão para Coworking
+
 
 `CURSO: Sistemas de Informação`
 
@@ -6,9 +6,11 @@
 
 `SEMESTRE: 6º`
 
-O projeto visa desenvolver um sistema completo para gerenciar espaços de coworking, oferecendo uma plataforma integrada composta por backend, frontend web e aplicativo móvel. O backend será responsável por toda a lógica de negócios, autenticação de usuários e controle de reservas, . Ele será desenvolvido utilizando uma API XXXX com XXXXXXX, garantindo escalabilidade e segurança. O banco de dados XXXXXX, armazenará informações sobre usuários, disponibilidade de salas e histórico de reservas. Além disso, será implementado um sistema de notificações via e-mail e push para manter os usuários informados sobre suas reservas.
+Documentação-de-Contexto
 
-O frontend web, desenvolvido com XXXXXX, oferecerá uma interface intuitiva para administradores e clientes gerenciarem seus espaços e agendamentos. O aplicativo móvel, disponível para Android e iOS, permitirá que os usuários façam reservas, consultem horários disponíveis, e recebam notificações em tempo real. A interface será responsiva e otimizada para oferecer uma experiência fluida, independentemente do dispositivo utilizado. 
+O projeto visa desenvolver um sistema completo para gerenciar espaços de coworking, oferecendo uma plataforma integrada composta por backend, frontend web e aplicativo móvel. O backend será responsável por toda a lógica de negócios, autenticação de usuários e controle de reservas, . Ele será desenvolvido, garantindo escalabilidade e segurança. O banco de dados, armazenará informações sobre usuários, disponibilidade de salas e histórico de reservas. Além disso, será implementado um sistema de notificações via e-mail e push para manter os usuários informados sobre suas reservas.
+O frontend web oferecerá uma interface intuitiva para administradores e clientes gerenciarem seus espaços e agendamentos. O aplicativo móvel, disponível para Android e iOS, permitirá que os usuários façam reservas, consultem horários disponíveis, e recebam notificações em tempo real. A interface será responsiva e otimizada para oferecer uma experiência fluida, independentemente do dispositivo utilizado.
+
 
 ## Integrantes
 
