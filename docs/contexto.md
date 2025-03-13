@@ -67,12 +67,9 @@ Os requisitos não funcionais definem características e restrições técnicas 
 
 | Código  | Descrição | Prioridade |
 |---------|-----------|------------|
-| **RNF01** | O sistema deve suportar **no mínimo 1.000 usuários simultâneos**. | **Média** |
-| **RNF02** | A interface do sistema deve ser responsiva e acessível em dispositivos móveis e desktop. | **Alta** |
-| **RNF03** | O tempo de resposta para ações do usuário (ex: reservas) deve ser inferior a **2 segundos**. | **Alta** |
-| **RNF04** | O sistema deve garantir **segurança de dados**, com criptografia de senhas e comunicação segura (SSL/TLS). | **Alta** |
-| **RNF05** | O sistema deve ser compatível com os navegadores **Chrome, Firefox, Edge e Safari**. | **Média** |
-| **RNF06** | O sistema deve ter um **design intuitivo e acessível**, seguindo diretrizes de UX/UI. | **Média** |
+| **RNF01** | O sistema deve ser entregue até o final do semestre. | **Alta** |
+| **RNF02** | O sistema não deve ter custo financeiro. | **Alta** |
+
 
 
 ## Restrições
