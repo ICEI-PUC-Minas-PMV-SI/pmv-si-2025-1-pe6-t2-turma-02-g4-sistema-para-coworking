@@ -52,9 +52,9 @@ Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferece
 
 | Código  | Descrição | Prioridade | Responsável |
 |---------|-----------|------------|-------------|
-| **RF01** | O sistema deve permitir o CRUD de usuários. | **Alta** | Fillipe |
-| **RF02** | O sistema deve permitir o CRUD de salas e mesas, incluindo capacidade e recursos disponíveis. | **Alta** | Túlio |
-| **RF03** | O sistema deve permitir o CRUD de reservas de salas e mesas. | **Alta** | Nicollas |
+| **RF01** | O sistema deve permitir o  Gestão de usuários. | **Alta** | Fillipe |
+| **RF02** | O sistema deve permitir o  Gestão de salas e mesas, incluindo capacidade e recursos disponíveis. | **Alta** | Túlio |
+| **RF03** | O sistema deve permitir o  Gestão de reservas de salas e mesas. | **Alta** | Nicollas |
 | **RF04** | O sistema deve permitir a vizualização de salas e mesas disponíveis para reserva com data e hora. | **Alta** | Vinicius |
 | **RF05** | O sistema deve exibir notificações no site/aplicativo sobre confirmação, cancelamento e lembretes de reservas. | **Média** | Josenilson |
 | **RF06** | O administrador deve poder gerenciar usuários e suas permissões. | **Alta** | Fillipe |
