@@ -110,8 +110,6 @@ A arquitetura do sistema será baseada em uma abordagem cliente-servidor, utiliz
 
 ## Tecnologias Utilizadas
 
-Backend e API:
-
 C# e ASP.NET → Responsável pela lógica de negócios e comunicação com o banco de dados.
 Banco de Dados:
 
