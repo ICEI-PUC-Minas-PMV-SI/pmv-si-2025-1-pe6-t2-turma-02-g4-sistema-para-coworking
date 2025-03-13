@@ -1,6 +1,12 @@
 # Introdução
 
-Este documento apresenta o contexto para o desenvolvimento do Sistema para Coworking, abordando sua justificativa, objetivos e público-alvo. O projeto visa criar uma plataforma tecnológica que facilite a gestão e a reserva de espaços compartilhados, oferecendo uma experiência otimizada tanto para usuários quanto para administradores.
+Com o crescimento do trabalho híbrido e remoto, os espaços de coworking se tornaram uma alternativa essencial para profissionais autônomos, startups e empresas que buscam flexibilidade e infraestrutura adequada. No entanto, a gestão eficiente desses espaços ainda representa um desafio, principalmente quando realizada de forma manual ou com sistemas pouco integrados.
+
+Este projeto propõe o desenvolvimento de um Sistema para Coworking, uma plataforma web e mobile que permite aos usuários visualizar e reservar salas e mesas em tempo real. Além disso, oferece um painel administrativo para que gestores possam monitorar e gerenciar reservas de forma eficiente.
+
+O objetivo é otimizar a operação dos espaços de coworking, evitando agendamentos conflitantes e melhorando a experiência dos usuários por meio de um sistema intuitivo, seguro e de fácil acesso. A plataforma também contará com recursos como notificações sobre reservas, relatórios de ocupação e, opcionalmente, pagamento online.
+
+Diante do crescimento contínuo desse mercado no Brasil, uma solução tecnológica como essa se torna fundamental para garantir um ambiente organizado, acessível e funcional tanto para os usuários quanto para os administradores dos espaços de coworking.
 
 ## Problema
 Muitos espaços de coworking enfrentam desafios na organização e gestão de reservas, frequentemente utilizando processos manuais ou sistemas fragmentados. Isso pode resultar em agendamentos conflitantes, falta de transparência na disponibilidade de recursos e dificuldades na comunicação com os usuários, impactando negativamente a eficiência operacional e a satisfação dos clientes.
