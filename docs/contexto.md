@@ -13,7 +13,19 @@ Muitos espaços de coworking enfrentam desafios na organização e gestão de re
 
 ## Objetivos
 
-O Sistema para Coworking tem como objetivo principal fornecer uma plataforma integrada (web e mobile) que permita aos usuários visualizar e reservar salas e mesas de acordo com a disponibilidade em tempo real. Além disso, oferecerá um painel administrativo para que os gestores dos espaços possam monitorar e gerenciar as reservas de forma eficaz.
+Desenvolver um backend robusto para gerenciar a lógica de negócios e garantir a comunicação eficiente com o banco de dados.
+
+Implementar um banco de dados relacional, armazenando informações sobre usuários, reservas e disponibilidade de salas e mesas com integridade e segurança.
+
+Criar uma aplicação web responsiva com React.js, permitindo que os usuários realizem reservas de forma intuitiva e visualizem a disponibilidade em tempo real.
+
+Desenvolver um aplicativo mobile em Flutter para possibilitar o acesso rápido e prático às reservas diretamente pelo smartphone.
+
+Oferecer um painel administrativo que permita aos gestores visualizar, monitorar e gerenciar reservas, garantindo um controle eficiente do espaço de coworking.
+
+Garantir a segurança dos dados através da criptografia de senhas, comunicação segura (SSL/TLS) e conformidade com a LGPD.
+
+Assegurar a escalabilidade e desempenho do sistema, garantindo suporte para pelo menos 1.000 usuários simultâneos com tempo de resposta inferior a 2 segundos.
 
 ## Justificativa
 
