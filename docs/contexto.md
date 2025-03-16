@@ -117,24 +117,17 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 A arquitetura do sistema será baseada em uma abordagem cliente-servidor, utilizando uma estrutura multi-camada para garantir modularidade, escalabilidade e manutenibilidade. O sistema será composto pelas camadas Apresentação (Frontend e Mobile), de Aplicação (Backend e API) e de Dados (Banco de Dados).
 
-![arq](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/Documenta%C3%A7%C3%A3o-de-Contexto/docs/img/arquitetura%20ilustracao.png)
+![arq](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/main/docs/img/arquitetura.drawio%20(1).png)
 
 
 ## Tecnologias Utilizadas
 
-C# e ASP.NET → Responsável pela lógica de negócios e comunicação com o banco de dados.
-Banco de Dados:
+1 - C# e ASP.NET → Responsável pela lógica de negócios e comunicação com o banco de dados.
+2 - Banco de Dados: SQL Server Express → Armazena informações sobre usuários, reservas e disponibilidade de salas/mesas.
+3 - React.js → Proporciona uma interface intuitiva para os usuários realizarem reservas.
+4 - Flutter → Permite que os usuários façam reservas diretamente pelo smartphone.
 
-SQL Server Express → Armazena informações sobre usuários, reservas e disponibilidade de salas/mesas.
-Frontend (Web):
 
-React.js → Proporciona uma interface intuitiva para os usuários realizarem reservas.
-Aplicativo Mobile:
-
-Flutter → Permite que os usuários façam reservas diretamente pelo smartphone.
-
-Aqui está um diagrama ilustrando como as tecnologias do sistema de reservas para coworking estão relacionadas. Ele mostra o fluxo de interação do usuário desde o frontend (web ou mobile) até o backend e o banco de dados, retornando uma resposta ao usuário.
-![arq](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/Documenta%C3%A7%C3%A3o-de-Contexto/docs/img/Diagrama%20linguagens.png)
 
 
 ## Hospedagem
