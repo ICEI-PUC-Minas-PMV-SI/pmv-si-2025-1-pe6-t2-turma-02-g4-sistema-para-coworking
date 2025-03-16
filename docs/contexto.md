@@ -81,7 +81,12 @@ Os requisitos não funcionais definem características e restrições técnicas 
 |---------|-----------|------------|
 | **RNF01** | O sistema deve ser entregue até o final do semestre. | **Alta** |
 | **RNF02** | O sistema não deve ter custo financeiro. | **Alta** |
-
+| **RNF03** | O sistema deve ser hospedado em um ambiente que suporte um mínimo de 1.000 usuários simultâneos. |
+| **RNF04** | Deve ser implementado um banco de dados relacional que suporte transações simultâneas e integridade referencial. |
+| **RNF05** | O sistema deve estar disponível 24/7, garantindo alta disponibilidade para os usuários. |
+| **RNF06** | O sistema deve seguir normas de proteção de dados e privacidade, como a **LGPD (Lei Geral de Proteção de Dados)**. |
+| **RNF07** | Os relatórios sobre ocupação e uso dos espaços devem ser gerados em formato **visual e acessível** para facilitar a análise de dados. |
+| **RNF08** | O projeto deverá ser entregue até o final do semestre |
 
 
 ## Restrições
@@ -90,12 +95,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 | ID  | Restrição |
 |-----|---------------------------------------------------------------|
-| **R01** | O sistema deve ser hospedado em um ambiente que suporte um mínimo de 1.000 usuários simultâneos. |
-| **R02** | Deve ser implementado um banco de dados relacional que suporte transações simultâneas e integridade referencial. |
-| **R03** | O sistema deve estar disponível 24/7, garantindo alta disponibilidade para os usuários. |
-| **R04** | O sistema deve seguir normas de proteção de dados e privacidade, como a **LGPD (Lei Geral de Proteção de Dados)**. |
-| **R05** | Os relatórios sobre ocupação e uso dos espaços devem ser gerados em formato **visual e acessível** para facilitar a análise de dados. |
-| **R06** | O projeto deverá ser entregue até o final do semestre |
+| **R01** | O projeto deverá ser entregue até o final do semestre |
 
 
 
