@@ -103,7 +103,7 @@ O projeto contempla o desenvolvimento de: Backend e API: Implementação em C# e
 **Exemplo de Requisição e Resposta**
 Exemplo: Criar uma reserva (POST /reservas)
 Requisição:
-```
+```json
 {
   "salaId": 0,
   "mesaId": 0,
@@ -114,7 +114,7 @@ Requisição:
 Resposta:
 200	OK
 
-```
+```json
 {
   "id": 0,
   "usuarioId": 0,
@@ -234,4 +234,6 @@ O administrador realiza login, gerencia usuários, consulta espaços e realiza u
     "message": "Sua reserva foi confirmada! ID: 9"
 }
 ```
+![arq](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/main/docs/img/Teste%20Postman.png)
+
 
