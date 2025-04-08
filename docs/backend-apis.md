@@ -32,7 +32,6 @@ Principais Entidades:
 Usuários: Armazena informações dos usuários do sistema (administradores e clientes).
 Salas/Mesas: Representa os espaços disponíveis para reserva.
 Reservas: Registra as reservas feitas pelos usuários.
-Pagamentos: Caso necessário, gerencia pagamentos de reservas.
 Notificações: Armazena alertas sobre confirmações, cancelamentos e lembretes de reservas.
 
 Relacionamentos Chave:
@@ -43,13 +42,12 @@ Um pagamento está vinculado a uma reserva (1:1).
 **Estrutura da API**
 A API segue os princípios RESTful, organizando os endpoints por recursos.
 
-/api/auth          > Autenticação e autorização  
-/api/users         > Gerenciamento de usuários  
-/api/spaces        > Gerenciamento de salas/mesas  
+/api/auth/login    > Autenticação e autorização  
+/api/usuarios      > Gerenciamento de usuários  
+/api/salas         > Gerenciamento de salas  
+/api/mesas         > Gerenciamento de mesas
 /api/reservations  > Gerenciamento de reservas  
-/api/payments      > Processamento de pagamentos  
-/api/notifications > Notificações do sistema  
-/api/reports       > Relatórios sobre ocupação e reservas 
+
 
 
 ## Tecnologias Utilizadas
@@ -69,54 +67,87 @@ O projeto contempla o desenvolvimento de: Backend e API: Implementação em C# e
 **Usuários**
 | Método  | Endpoint        | Descrição |
 |---------|----------------|-----------|
-| **GET**    | `/api/users` | Lista todos os usuários (apenas admin). |
-| **GET**    | `/api/users/{id}` | Obtém detalhes de um usuário específico. |
-| **PUT**    | `/api/users/{id}` | Atualiza informações de um usuário. |
-| **DELETE** | `/api/users/{id}` | Exclui um usuário do sistema. |
+| **GET**    | `/api/usuarios` | Lista todos os usuários (apenas admin). |
+| **GET**    | `/api/usuarios/{id}` | Obtém detalhes de um usuário específico. |
+| **PUT**    | `/api/usuarios/{id}` | Atualiza informações de um usuário. |
+| **DELETE** | `/api/usuarios/{id}` | Exclui um usuário do sistema. |
 
-**Salas e Mesas**
+**Salas**
 | Método  | Endpoint        | Descrição |
 |---------|----------------|-----------|
-| **GET**    | `/api/spaces` | Lista todas as salas e mesas disponíveis. |
-| **GET**    | `/api/spaces/{id}` | Obtém detalhes de uma sala/mesa específica. |
-| **POST**   | `/api/spaces` | Cria uma nova sala ou mesa (apenas admin). |
-| **PUT**    | `/api/spaces/{id}` | Atualiza informações de uma sala ou mesa (apenas admin). |
-| **DELETE** | `/api/spaces/{id}` | Remove uma sala ou mesa (apenas admin). |
+| **GET**    | `/api/salas` | Lista todas as salas disponíveis. |
+| **GET**    | `/api/salas/{id}` | Obtém detalhes de uma sala específica. |
+| **POST**   | `/api/salas` | Cria uma nova sala (apenas admin). |
+| **PUT**    | `/api/salas/{id}` | Atualiza informações de uma sala (apenas admin). |
+| **DELETE** | `/api/salas/{id}` | Remove uma sala (apenas admin). |
+
+**Mesas**
+| Método  | Endpoint        | Descrição |
+|---------|----------------|-----------|
+| **GET**    | `/api/mesas` | Lista todas as mesas disponíveis. |
+| **GET**    | `/api/mesas/{id}` | Obtém detalhes de mesas específica. |
+| **POST**   | `/api/mesas` | Cria novas mesas (apenas admin). |
+| **PUT**    | `/api/mesas/{id}` | Atualiza informações de mesas (apenas admin). |
+| **DELETE** | `/api/mesas/{id}` | Remove mesas (apenas admin). |
 
 **Reservas**
 | Método  | Endpoint        | Descrição |
 |---------|----------------|-----------|
-| **GET**    | `/api/reservations` | Lista todas as reservas (admin) ou reservas do usuário autenticado. |
-| **GET**    | `/api/reservations/{id}` | Obtém detalhes de uma reserva específica. |
-| **POST**   | `/api/reservations` | Cria uma nova reserva. |
-| **PUT**    | `/api/reservations/{id}` | Atualiza informações de uma reserva existente. |
-| **DELETE** | `/api/reservations/{id}` | Cancela uma reserva. |
+| **GET**    | `/api/reservas` | Lista todas as reservas (admin) ou reservas do usuário autenticado. |
+| **GET**    | `/api/reservas/{id}` | Obtém detalhes de uma reserva específica. |
+| **POST**   | `/api/reservas` | Cria uma nova reserva. |
+| **PUT**    | `/api/reservas/{id}` | Atualiza informações de uma reserva existente. |
+| **DELETE** | `/api/reservas/{id}` | Cancela uma reserva. |
 
 
 **Exemplo de Requisição e Resposta**
-Exemplo: Criar uma reserva (POST /reservations)
+Exemplo: Criar uma reserva (POST /reservas)
 Requisição:
 ```
 {
-  "userId": 1,
-  "spaceId": 3,
-  "date": "2025-02-20",
-  "timeStart": "10:00",
-  "timeEnd": "12:00"
+  "salaId": 0,
+  "mesaId": 0,
+  "dataHora": "2025-04-08T00:11:02.789Z"
 }
 ```
 
 Resposta:
+200	OK
+
 ```
 {
-  "id": 101,
-  "userId": 1,
-  "spaceId": 3,
-  "date": "2025-02-20",
-  "timeStart": "10:00",
-  "timeEnd": "12:00",
-  "status": "confirmed",
-  "message": "Reserva realizada com sucesso!"
+  "id": 0,
+  "usuarioId": 0,
+  "usuario": {
+    "id": 0,
+    "nome": "string",
+    "email": "user@example.com",
+    "telefone": "string",
+    "cpf": "string",
+    "senhaHash": "string",
+    "role": "string"
+  },
+  "salaId": 0,
+  "sala": {
+    "id": 0,
+    "nome": "string",
+    "capacidade": 0,
+    "recursos": "string"
+  },
+  "mesaId": 0,
+  "mesa": {
+    "id": 0,
+    "numero": 0,
+    "salaId": 0,
+    "sala": {
+      "id": 0,
+      "nome": "string",
+      "capacidade": 0,
+      "recursos": "string"
+    }
+  },
+  "dataHora": "2025-04-08T00:11:02.790Z",
+  "status": "string"
 }
 ```
 
@@ -126,27 +157,81 @@ Resposta:
 Segurança e Autenticação
 - Todas as rotas protegidas exigem autenticação via JWT.
 - Permissões diferenciadas: Administradores podem gerenciar usuários, enquanto usuários comuns só podem criar e visualizar suas próprias reservas.
+- Tokens são gerados via login e devem ser enviados no header Authorization: Bearer {token}.
 
 ## Implantação
 
-[Instruções para implantar a aplicação distribuída em um ambiente de produção.]
+A implantação da aplicação de coworking envolve a publicação da API ASP.NET no ambiente de produção, configuração do banco de dados SQL Server e integração com o frontend (React) e aplicativo mobile (Flutter).
 
-1. Defina os requisitos de hardware e software necessários para implantar a aplicação em um ambiente de produção.
-2. Escolha uma plataforma de hospedagem adequada, como um provedor de nuvem ou um servidor dedicado.
-3. Configure o ambiente de implantação, incluindo a instalação de dependências e configuração de variáveis de ambiente.
-4. Faça o deploy da aplicação no ambiente escolhido, seguindo as instruções específicas da plataforma de hospedagem.
-5. Realize testes para garantir que a aplicação esteja funcionando corretamente no ambiente de produção.
+## Caso de Teste – Fluxo do Administrador
 
-## Testes
+### Cenário
+O administrador realiza login, gerencia usuários, consulta espaços e realiza uma reserva de teste para verificar a funcionalidade da aplicação.
 
-[Descreva a estratégia de teste, incluindo os tipos de teste a serem realizados (unitários, integração, carga, etc.) e as ferramentas a serem utilizadas.]
+---
 
-1. Crie casos de teste para cobrir todos os requisitos funcionais e não funcionais da aplicação.
-2. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
-3. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
-4. Execute testes de carga para avaliar o desempenho da aplicação sob carga significativa.
-5. Utilize ferramentas de teste adequadas, como frameworks de teste e ferramentas de automação de teste, para agilizar o processo de teste.
+### 1. **Login do Administrador**
 
-# Referências
+**Rota:** `POST /api/auth/login`  
+**Requisição:**
+```json
+{
+  "email": "admin@email.com",
+  "senha": "Senha123"
+}
+```
+**Resposta:**
+```json
+{
+  "token": "<JWT_TOKEN_AQUI>",
+  "message": "Login realizado com sucesso."
+}
+```
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
+### 2. **Criar um novo usuário**
+
+**Rota:** `POST /api/auth/register`  
+**Requisição:**
+```json
+{
+  "nome": "João da Silva",
+  "cpf": "12345678900",
+  "email": "joao@email.com",
+  "senha": "Senha123"
+}
+```
+**Resposta:**
+```json
+{
+  "message": "Usuário registrado com sucesso!"
+}
+```
+
+### 3. **Deletar um usuário**
+
+**Rota:** `DELETE /api/users/5`  
+**Resposta:**
+```json
+{
+  "message": "Usuário deletado com sucesso."
+}
+```
+
+### 2. **Criar um novo usuário**
+
+**Rota:** `POST /api/reservas`  
+**Requisição:**
+```json
+{
+  "salaId": 2,
+  "salaId": 1,
+  "dataHora": "2025-05-08T20:00:00"
+}
+```
+**Resposta:**
+```json
+{
+    "message": "Sua reserva foi confirmada! ID: 9"
+}
+```
+
