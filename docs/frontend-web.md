@@ -1,10 +1,30 @@
 # Front-end Web
 
-[Inclua uma breve descrição do projeto e seus objetivos.]
+A plataforma Front‑end Web é uma aplicação responsiva para gerenciamento de espaços de coworking, desenvolvida para simplificar a reserva de mesas, salas de reunião e ambientes de trabalho híbridos ou remotos. Seus principais objetivos são:
+
+Oferecer uma experiência de reserva intuitiva e ágil para usuários finais e administradores.
+
+Permitir o agendamento de mesas e salas com antecedência, garantindo maior controle de agenda.
+
+Proporcionar visibilidade e gestão centralizada de usuários, reservas e configurações de espaços.
 
 ## Projeto da Interface Web
 
-[Descreva o projeto da interface Web da aplicação, incluindo o design visual, layout das páginas, interações do usuário e outros aspectos relevantes.]
+A interface foi projetada com foco em usabilidade e clareza visual, adotando um layout em grade de 12 colunas que se adapta a diferentes larguras de tela. Os principais aspectos incluem:
+
+Navegação principal: menu superior fixo com seções Home, Reservar Mesa, Participar de Mesa, Perfil e Painel Administrativo.
+
+Layouts de página:
+
+Home: seção de boas‑vindas com carrossel de temas (Home Office, Café Ambience, Clean Simple), estatísticas de uso e chamada para ação (CTA) para nova reserva.
+
+Reserva de Mesa: formulário passo a passo para escolha de tema, data, horário e confirmação de reserva.
+
+Participar de Mesa: lista de mesas disponíveis com filtros de tema e horário.
+
+Perfil de Usuário: visualização e edição de dados pessoais, configurações de conta e histórico de reservas.
+
+Administração: painel de controle para gerenciamento de usuários, temas e espaços.
 
 ### Wireframes
 
