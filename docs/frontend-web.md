@@ -38,7 +38,19 @@ Administração: painel de controle para gerenciamento de usuários, temas e esp
 
 ### Design Visual
 
-[Descreva o estilo visual da interface, incluindo paleta de cores, tipografia, ícones e outros elementos gráficos.]
+O design adota um estilo moderno e minimalista, com foco em clareza e consistência:
+
+Paleta de Cores:
+
+Primária: verde‑azulado (#2B8A3E)
+
+Secundária: laranja‑quente (#F78C15)
+
+Neutras: branco (#FFFFFF), cinza‑claro (#F5F5F5), cinza‑escuro (#4A4A4A)
+
+Tipografia: combinação das fontes "Inter" para títulos (peso 600‑700) e "Roboto" para textos (peso 400‑500), garantindo legibilidade em diferentes tamanhos.
+
+Ícones e Elementos Gráficos: XXXXXXXX
 
 ## Fluxo de Dados
 
