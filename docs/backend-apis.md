@@ -28,6 +28,8 @@ A API será estruturada em diferentes recursos (endpoints), organizados de forma
 **Estrutura de Dados**
 A aplicação segue um modelo relacional para armazenar e gerenciar os dados, utilizando SQL Server Express como banco de dados. O Modelo de Entidade-Relacionamento (MER) descreve as principais tabelas e seus relacionamentos:
 
+![arq](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/main/docs/img/MER.png)
+
 Principais Entidades:
 Usuários: Armazena informações dos usuários do sistema (administradores e clientes).
 Salas/Mesas: Representa os espaços disponíveis para reserva.
