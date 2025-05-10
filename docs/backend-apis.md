@@ -237,3 +237,8 @@ O administrador realiza login, gerencia usuários, consulta espaços e realiza u
 ![arq](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/main/docs/img/Teste%20Postman.png)
 
 
+## Configurações da API e Testes Postman
+
+No pdf anexo se encontra as descrições de todos os endpoins, seus métodos acompanhados de testes de cada um via Postman
+
+https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/main/docs/Endpoints_prints_testes.pdf)
