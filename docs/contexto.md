@@ -79,7 +79,6 @@ Os requisitos não funcionais definem características e restrições técnicas 
 
 | Código  | Descrição | Prioridade |
 |---------|-----------|------------|
-
 | **RNF01** | O sistema deve ser hospedado em um ambiente que suporte um mínimo de 1.000 usuários simultâneos. |
 | **RNF02** | Deve ser implementado um banco de dados relacional que suporte transações simultâneas e integridade referencial. |
 | **RNF03** | O sistema deve estar disponível 24/7, garantindo alta disponibilidade para os usuários. |
