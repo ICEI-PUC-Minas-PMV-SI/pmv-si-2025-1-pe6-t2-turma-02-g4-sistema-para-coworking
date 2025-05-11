@@ -72,7 +72,7 @@ Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferece
 | **RF06** | O administrador deve poder gerenciar usuários e suas permissões. | **Alta** | Fillipe |
 | **RF07** | O administrador deve poder visualizar e gerenciar reservas. | **Alta** | Nicollas |
 | **RF08** | O sistema deve oferecer relatórios sobre ocupação e uso dos espaços. | **Baixa** | Tulio |
-| **RF09** | O sistema deve permitir o pagamento online das reservas, caso necessário. | **Baixa** | Vinicius |
+
 
 ## 2. Requisitos Não Funcionais (RNF)
 Os requisitos não funcionais definem características e restrições técnicas do sistema.
