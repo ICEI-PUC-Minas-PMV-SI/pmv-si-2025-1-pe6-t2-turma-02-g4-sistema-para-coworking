@@ -143,9 +143,6 @@ Atualize a ConnectionString no appsettings.Production.json
 
 Clone o projeto:
 
-bash
-Copiar
-Editar
 git clone https://github.com/seu-usuario/seu-repositorio.git
 Compile a aplicação:
 
