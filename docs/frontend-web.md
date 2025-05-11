@@ -78,24 +78,24 @@ Swagger (Swashbuckle) – Utilizado para geração automática da documentação
 
 ## Considerações de Segurança
 
-# Autenticação
+### Autenticação
 Utiliza JWT (JSON Web Token) para autenticação stateless.
 
 Os tokens são gerados no login e enviados em todas as requisições protegidas via header Authorization (Bearer {token}).
 
 Tokens possuem tempo de expiração e são validados a cada requisição.
 
-# Autorização
+### Autorização
 As rotas da API estão protegidas com políticas de autorização baseadas em perfis (usuario, admin).
 
 Apenas usuários com permissão adequada podem executar ações sensíveis, como cadastro, edição e exclusão de dados.
 
-# Validação de Dados
+### Validação de Dados
 Todas as requisições são validadas server-side via data annotations e filtros personalizados no ASP.NET Core.
 
 O uso de ModelState e mensagens padronizadas reduz o risco de entrada de dados maliciosos.
 
-# Proteção contra ataques comuns
+### Proteção contra ataques comuns
 SQL Injection: mitigado com uso de Entity Framework Core (ORM seguro por padrão).
 
 Cross-Site Scripting (XSS): controlado via escaping automático no React e validação dos inputs.
@@ -104,7 +104,7 @@ Cross-Site Request Forgery (CSRF): não aplicável diretamente a APIs REST com J
 
 Rate Limiting e throttling podem ser ativados para proteger endpoints públicos contra abusos.
 
-# Armazenamento Seguro de Senhas
+### Armazenamento Seguro de Senhas
 Senhas dos usuários são armazenadas como hashes criptografadas, utilizando algoritmo robusto como bcrypt, nunca em texto puro.
 
 ## Implantação
