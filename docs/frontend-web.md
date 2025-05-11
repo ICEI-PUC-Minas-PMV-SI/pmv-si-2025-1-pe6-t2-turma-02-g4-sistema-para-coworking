@@ -109,13 +109,93 @@ Senhas dos usuários são armazenadas como hashes criptografadas, utilizando alg
 
 ## Implantação
 
-[Instruções para implantar a aplicação distribuída em um ambiente de produção.]
+### Requisitos de Hardware e Software
+Hardware mínimo recomendado:
+CPU: 2 vCPUs
+RAM: 4 GB
+Armazenamento: 20 GB SSD
+Conectividade: Porta 80 (HTTP) e 443 (HTTPS) liberadas
 
-1. Defina os requisitos de hardware e software necessários para implantar a aplicação em um ambiente de produção.
-2. Escolha uma plataforma de hospedagem adequada, como um provedor de nuvem ou um servidor dedicado.
-3. Configure o ambiente de implantação, incluindo a instalação de dependências e configuração de variáveis de ambiente.
-4. Faça o deploy da aplicação no ambiente escolhido, seguindo as instruções específicas da plataforma de hospedagem.
-5. Realize testes para garantir que a aplicação esteja funcionando corretamente no ambiente de produção.
+### Software necessário no servidor:
+.NET SDK 8.0+
+SQL Server Express ou outra instância compatível
+IIS (opcional) ou uso via Kestrel/serviço Windows
+Node.js e npm para build do front-end React
+Git (para clonar o projeto)
+
+### Plataforma de Hospedagem
+Neste projeto, a aplicação será hospedada em: Servidor dedicado ou VPS (Windows Server) acessível via RDP um EC2 da AWS, com acesso apenas ao sistema operacional
+
+### Preparação do ambiente
+Acesse o servidor via RDP.
+
+Instale o .NET SDK e o runtime:
+
+bash
+Copiar
+Editar
+dotnet --version
+Configure o banco de dados:
+
+Restaure o backup do SQL Server se necessário
+
+Atualize a ConnectionString no appsettings.Production.json
+
+Clone o projeto:
+
+bash
+Copiar
+Editar
+git clone https://github.com/seu-usuario/seu-repositorio.git
+Compile a aplicação:
+
+cd CoworkingAPI
+dotnet publish -c Release -o ./publish
+
+### Configuração de variáveis de ambiente
+Crie variáveis no sistema ou use appsettings.Production.json para configurar:
+
+JWT Key e Expiração
+
+String de conexão do banco
+
+CORS (separar domínios permitidos)
+
+Logs e modo Production
+
+Exemplo de appsettings.Production.json:
+
+
+{
+  "Jwt": {
+    "Key": "chavesecretaprod",
+    "Issuer": "CoworkingAPI",
+    "Audience": "CoworkingFrontend",
+    "ExpireMinutes": 60
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=CoworkingDB;Trusted_Connection=True;"
+  }
+}
+
+### Deploy da aplicação
+
+Execute a API usando dotnet diretamente:
+dotnet ./publish/CoworkingAPI.dll
+Ou registre como um serviço do Windows para execução contínua.
+Para servir como serviço:
+
+Use sc.exe ou o utilitário NSSM (Non-Sucking Service Manager).
+
+Configure para iniciar junto ao sistema.
+
+### Front-end
+
+Faça o build com:
+
+npm install
+npm run build
+Copie a pasta build/ para o IIS ou use um servidor estático (
 
 ## Testes
 
