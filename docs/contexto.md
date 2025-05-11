@@ -79,14 +79,13 @@ Os requisitos não funcionais definem características e restrições técnicas 
 
 | Código  | Descrição | Prioridade |
 |---------|-----------|------------|
-| **RNF01** | O sistema deve ser entregue até o final do semestre. | **Alta** |
-| **RNF02** | O sistema não deve ter custo financeiro. | **Alta** |
-| **RNF03** | O sistema deve ser hospedado em um ambiente que suporte um mínimo de 1.000 usuários simultâneos. |
-| **RNF04** | Deve ser implementado um banco de dados relacional que suporte transações simultâneas e integridade referencial. |
-| **RNF05** | O sistema deve estar disponível 24/7, garantindo alta disponibilidade para os usuários. |
-| **RNF06** | O sistema deve seguir normas de proteção de dados e privacidade, como a **LGPD (Lei Geral de Proteção de Dados)**. |
-| **RNF07** | Os relatórios sobre ocupação e uso dos espaços devem ser gerados em formato **visual e acessível** para facilitar a análise de dados. |
-| **RNF08** | O projeto deverá ser entregue até o final do semestre |
+
+| **RNF01** | O sistema deve ser hospedado em um ambiente que suporte um mínimo de 1.000 usuários simultâneos. |
+| **RNF02** | Deve ser implementado um banco de dados relacional que suporte transações simultâneas e integridade referencial. |
+| **RNF03** | O sistema deve estar disponível 24/7, garantindo alta disponibilidade para os usuários. |
+| **RNF04** | O sistema deve seguir normas de proteção de dados e privacidade, como a **LGPD (Lei Geral de Proteção de Dados)**. |
+
+
 
 
 ## Restrições
