@@ -78,7 +78,34 @@ Swagger (Swashbuckle) – Utilizado para geração automática da documentação
 
 ## Considerações de Segurança
 
-[Discuta as considerações de segurança relevantes para a aplicação distribuída, como autenticação, autorização, proteção contra ataques, etc.]
+# Autenticação
+Utiliza JWT (JSON Web Token) para autenticação stateless.
+
+Os tokens são gerados no login e enviados em todas as requisições protegidas via header Authorization (Bearer {token}).
+
+Tokens possuem tempo de expiração e são validados a cada requisição.
+
+# Autorização
+As rotas da API estão protegidas com políticas de autorização baseadas em perfis (usuario, admin).
+
+Apenas usuários com permissão adequada podem executar ações sensíveis, como cadastro, edição e exclusão de dados.
+
+# Validação de Dados
+Todas as requisições são validadas server-side via data annotations e filtros personalizados no ASP.NET Core.
+
+O uso de ModelState e mensagens padronizadas reduz o risco de entrada de dados maliciosos.
+
+# Proteção contra ataques comuns
+SQL Injection: mitigado com uso de Entity Framework Core (ORM seguro por padrão).
+
+Cross-Site Scripting (XSS): controlado via escaping automático no React e validação dos inputs.
+
+Cross-Site Request Forgery (CSRF): não aplicável diretamente a APIs REST com JWT (tokens não são enviados automaticamente pelo navegador).
+
+Rate Limiting e throttling podem ser ativados para proteger endpoints públicos contra abusos.
+
+# Armazenamento Seguro de Senhas
+Senhas dos usuários são armazenadas como hashes criptografadas, utilizando algoritmo robusto como bcrypt, nunca em texto puro.
 
 ## Implantação
 
@@ -92,13 +119,9 @@ Swagger (Swashbuckle) – Utilizado para geração automática da documentação
 
 ## Testes
 
-[Descreva a estratégia de teste, incluindo os tipos de teste a serem realizados (unitários, integração, carga, etc.) e as ferramentas a serem utilizadas.]
+Os testes de usuário realizados e suas evidências se encontram no pdf abaixo:
 
-1. Crie casos de teste para cobrir todos os requisitos funcionais e não funcionais da aplicação.
-2. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
-3. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
-4. Execute testes de carga para avaliar o desempenho da aplicação sob carga significativa.
-5. Utilize ferramentas de teste adequadas, como frameworks de teste e ferramentas de automação de teste, para agilizar o processo de teste.
+https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/main/docs/Testes de Usuário.pdf)
 
 # Referências
 
