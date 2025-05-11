@@ -57,7 +57,24 @@ Tipografia: combinação das fontes "Inter" para títulos (peso 600‑700) e "Ro
 ![arq](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/main/docs/img/fluxo_de_dados.png)
 
 ## Tecnologias Utilizadas
-[Lista das tecnologias principais que serão utilizadas no projeto.]
+
+A aplicação foi desenvolvida utilizando um conjunto de tecnologias, organizadas em camadas para garantir escalabilidade, manutenibilidade e segurança. Abaixo estão as principais tecnologias aplicadas no projeto:
+
+C# com ASP.NET Core – Utilizado para construir a API RESTful que expõe os serviços da aplicação. Estrutura baseada em Controllers, com autenticação via JWT e validações server-side.
+
+Entity Framework Core – ORM utilizado para comunicação com o banco de dados SQL Server, permitindo mapeamento objeto-relacional, migrações e controle de transações.
+
+SQL Server Express – Banco de dados relacional responsável pelo armazenamento de entidades como Usuários, Salas, Mesas e Reservas.
+
+React.js – Framework JavaScript utilizado para o desenvolvimento do front-end web da aplicação, garantindo uma interface responsiva e dinâmica.
+
+Flutter – Framework multiplataforma para a construção do aplicativo mobile, permitindo acesso rápido e nativo à funcionalidade de reservas.
+
+JWT (JSON Web Tokens) – Implementado como mecanismo de autenticação e autorização entre cliente e servidor, protegendo rotas sensíveis.
+
+Postman – Ferramenta utilizada para testes e validações dos endpoints da API durante o desenvolvimento.
+
+Swagger (Swashbuckle) – Utilizado para geração automática da documentação interativa da API, facilitando a inspeção e o consumo por outros desenvolvedores.
 
 ## Considerações de Segurança
 
