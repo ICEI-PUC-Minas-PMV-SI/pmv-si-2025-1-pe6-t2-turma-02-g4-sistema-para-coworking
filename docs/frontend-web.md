@@ -198,7 +198,7 @@ Copie a pasta build/ para o IIS ou use um servidor estático (
 
 Os testes de usuário realizados e suas evidências se encontram no pdf abaixo:
 
-https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/main/docs/Teste_de_usuario.pdf)
+https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/main/docs/Testes_de_usuario.pdf)
 
 # Referências
 
