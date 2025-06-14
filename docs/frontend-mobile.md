@@ -6,20 +6,15 @@ Este projeto visa desenvolver uma interface móvel para um sistema de gestão de
 
 A interface móvel foi projetada com foco na usabilidade, priorizando clareza, simplicidade e acesso direto às funcionalidades principais. O layout segue o conceito mobile-first, garantindo compatibilidade com dispositivos de diferentes tamanhos de tela, especialmente smartphones.
 
-Funcionalidades principais:
-Login e Cadastro de Usuário
+### Funcionalidades principais:
 
-Visualização de Salas com Imagens
-
-Reserva de Salas
-
-Painel Administrativo para gerenciamento
-
-Formulário para criação, edição e exclusão de usuários
-
-Busca por ID
-
-Visualização de todos os usuários cadastrados
+- Login e Cadastro de Usuário  
+- Visualização de Salas com Imagens  
+- Reserva de Salas  
+- Painel Administrativo para gerenciamento  
+- Formulário para criação, edição e exclusão de usuários  
+- Busca por ID  
+- Visualização de todos os usuários cadastrados  
 
 As interações foram projetadas para serem intuitivas, com botões bem visíveis, campos de formulário organizados e feedback claro ao usuário. Ícones de navegação ajudam a reforçar a experiência mobile, e o sistema mantém consistência de navegação com cabeçalhos e menus fixos.
 
@@ -36,48 +31,39 @@ As interações foram projetadas para serem intuitivas, com botões bem visívei
 
 O design visual da aplicação segue uma estética moderna e minimalista, com foco na clareza das informações e facilidade de uso:
 
-Paleta de Cores: tons de verde (destaque para botões e cabeçalhos), branco e cinza-claro para fundo e áreas neutras, reforçando um ambiente limpo e profissional.
-
-Tipografia: fontes sem serifa (como Inter ou Roboto) foram utilizadas para garantir legibilidade em telas pequenas.
-
-Ícones: ícones simples e funcionais foram usados para facilitar a navegação, seguindo o padrão de aplicações mobile modernas.
-
-Componentes: botões com cantos arredondados, campos de input bem espaçados, e cards para exibir conteúdos visuais (como salas disponíveis).
-
+- **Paleta de Cores:** tons de verde (destaque para botões e cabeçalhos), branco e cinza-claro para fundo e áreas neutras, reforçando um ambiente limpo e profissional.  
+- **Tipografia:** fontes sem serifa (como Inter ou Roboto) foram utilizadas para garantir legibilidade em telas pequenas.  
+- **Ícones:** ícones simples e funcionais foram usados para facilitar a navegação, seguindo o padrão de aplicações mobile modernas.  
+- **Componentes:** botões com cantos arredondados, campos de input bem espaçados, e cards para exibir conteúdos visuais (como salas disponíveis).  
 
 ## Fluxo de Dados
 
 O fluxo de dados na aplicação segue uma estrutura clara entre o cliente (mobile) e o backend:
 
-Login e Autenticação
+### Login e Autenticação
 
-Usuário envia email e senha
+- Usuário envia email e senha  
+- Backend valida e retorna token/autorização  
 
-Backend valida e retorna token/autorização
+### Visualização de Salas
 
-Visualização de Salas
+- App requisita lista de salas disponíveis  
+- Backend retorna dados com imagens, horários e identificadores  
 
-App requisita lista de salas disponíveis
+### Reserva
 
-Backend retorna dados com imagens, horários e identificadores
+- Usuário escolhe sala e envia solicitação de reserva  
+- Backend valida disponibilidade e confirma/agrega ao banco  
 
-Reserva
+### Administração (caso autorizado)
 
-Usuário escolhe sala e envia solicitação de reserva
+- Acesso ao painel administrativo  
+- CRUD de usuários, salas, mesas e reservas via formulários  
+- Dados são enviados e recebidos via API RESTful  
 
-Backend valida disponibilidade e confirma/agrega ao banco
+### Notificações
 
-Administração (caso autorizado)
-
-Acesso ao painel administrativo
-
-CRUD de usuários, salas, mesas e reservas via formulários
-
-Dados são enviados e recebidos via API RESTful
-
-Notificações
-
-Backend dispara confirmações e lembretes por e-mail/push notification (em etapas futuras)
+- Backend dispara confirmações e lembretes por e-mail/push notification (em etapas futuras)  
 
 Esse fluxo é mediado por uma API central, que garante a sincronização dos dados entre o app mobile, a aplicação web e o painel administrativo.
 
@@ -85,29 +71,22 @@ Esse fluxo é mediado por uma API central, que garante a sincronização dos dad
 
 O projeto do sistema de coworking utiliza as seguintes tecnologias principais:
 
-Flutter: Usado para o desenvolvimento do front-end do aplicativo móvel.
-
-C# com ASP.NET: Responsável pelo desenvolvimento do backend e da API, incluindo toda a lógica de negócios.
-
-SQL Server Express: Banco de dados utilizado para armazenar informações sobre usuários, reservas, salas e mesas.
-
-RESTful API: Estrutura de endpoints organizada por recursos como autenticação, usuários, salas, mesas e reservas.
-
-JWT (JSON Web Token): Utilizado para autenticação e autorização dos usuários.
+- **Flutter:** Usado para o desenvolvimento do front-end do aplicativo móvel.  
+- **C# com ASP.NET:** Responsável pelo desenvolvimento do backend e da API, incluindo toda a lógica de negócios.  
+- **SQL Server Express:** Banco de dados utilizado para armazenar informações sobre usuários, reservas, salas e mesas.  
+- **RESTful API:** Estrutura de endpoints organizada por recursos como autenticação, usuários, salas, mesas e reservas.  
+- **JWT (JSON Web Token):** Utilizado para autenticação e autorização dos usuários.  
 
 ## Considerações de Segurança
 
 A segurança da aplicação foi planejada com base nos seguintes pontos:
 
-Autenticação via JWT: O login gera um token JWT que deve ser enviado no cabeçalho Authorization em rotas protegidas.
+- **Autenticação via JWT:** O login gera um token JWT que deve ser enviado no cabeçalho `Authorization` em rotas protegidas.  
+- **Autorização por perfil:** A aplicação diferencia permissões entre usuários comuns e administradores.  
+- **Validações:** A API aplica regras de negócio e validações antes de persistir dados no banco.  
+- **Rotas protegidas:** Apenas usuários autenticados podem acessar recursos específicos.  
+- **Uso interno:** A API não é aberta para terceiros, sendo usada apenas pelas interfaces web (React.js) e mobile (Flutter).  
 
-Autorização por perfil: A aplicação diferencia permissões entre usuários comuns e administradores.
-
-Validações: A API aplica regras de negócio e validações antes de persistir dados no banco.
-
-Rotas protegidas: Apenas usuários autenticados podem acessar recursos específicos.
-
-Uso interno: A API não é aberta para terceiros, sendo usada apenas pelas interfaces web (React.js) e mobile (Flutter).
 
 ## Implantação
 
