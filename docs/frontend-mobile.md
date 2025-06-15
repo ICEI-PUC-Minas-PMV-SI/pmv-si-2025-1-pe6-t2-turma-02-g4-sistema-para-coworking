@@ -90,23 +90,166 @@ A segurança da aplicação foi planejada com base nos seguintes pontos:
 
 ## Implantação
 
-[Instruções para implantar a aplicação distribuída em um ambiente de produção.]
+# Documentação de Implantação - Sistema de Coworking
 
-1. Defina os requisitos de hardware e software necessários para implantar a aplicação em um ambiente de produção.
-2. Escolha uma plataforma de hospedagem adequada, como um provedor de nuvem ou um servidor dedicado.
-3. Configure o ambiente de implantação, incluindo a instalação de dependências e configuração de variáveis de ambiente.
-4. Faça o deploy da aplicação no ambiente escolhido, seguindo as instruções específicas da plataforma de hospedagem.
-5. Realize testes para garantir que a aplicação esteja funcionando corretamente no ambiente de produção.
+Este documento descreve os requisitos e procedimentos para implantar a aplicação de Coworking em um ambiente de produção.
+
+## Requisitos de Hardware e Software
+
+### Hardware Recomendado
+
+| Componente         | Mínimo Recomendado | Ideal para Escalabilidade |
+|--------------------|--------------------|----------------------------|
+| CPU                | 2 vCPUs            | 4+ vCPUs                   |
+| Memória RAM        | 4 GB               | 8+ GB                      |
+| Armazenamento SSD  | 50 GB              | 100+ GB                    |
+| Largura de banda   | 10 Mbps            | 50+ Mbps                   |
+
+### Software Necessário
+
+#### Backend (ASP.NET Core)
+
+- .NET SDK (ex: .NET 7 ou 8)
+- IIS (Windows Server) ou Kestrel (Linux)
+- Runtime do .NET instalado
+
+#### Frontend (React)
+
+- Node.js (LTS)
+- npm ou yarn
+- Webpack (opcional)
+
+#### Mobile (Flutter)
+
+- Apenas para build e publicação (APK/IPA)
+- Não exige hospedagem no servidor
+
+#### Banco de Dados
+
+- SQL Server Express (desenvolvimento) ou Azure SQL Database / SQL Server Web (produção)
+- SQL Server Management Studio (SSMS)
+
+---
+
+## Escolha da Plataforma de Hospedagem
+
+### Comparativo
+
+| Provedor  | AWS EC2 + RDS         | Azure App Service + SQL DB |
+|-----------|------------------------|-----------------------------|
+| Backend   | EC2 (Linux ou Windows) | App Service (Windows/Linux)|
+| Banco     | RDS (SQL Server)       | Azure SQL Database          |
+| Frontend  | S3 + CloudFront        | Azure Blob Storage + CDN    |
+| Escalável | Alta                   | Alta                        |
+| Custo     | Flexível               | Gerenciado, mais simples    |
+
+### Recomendação
+
+**Azure App Service + Azure SQL Database**
+
+- Integração com Visual Studio, GitHub Actions e Azure DevOps
+- Escalabilidade automática
+- Deploy simplificado com integração contínua
+- Segurança e backups automáticos
+
+---
+
+## Configuração do Ambiente de Implantação
+
+### Estrutura Geral do Projeto
+
+``bash
+/project-root
+|-- backend/ (ASP.NET)
+|-- frontend/ (React)
+|-- mobile/ (Flutter)
+|-- database/ (Scripts SQL)
+|-- .env (variáveis sensíveis)
+
+## Variáveis de Ambiente
+
+### Backend (.NET)
+```env
+ASPNETCORE_ENVIRONMENT=Production
+ConnectionStrings__DefaultConnection=Server=sqlserver-url;Database=coworkingdb;User Id=admin;Password=senha123;
+```
+### Frontend (React)
+```env
+REACT_APP_API_URL=https://api.seudominio.com
+```
+
+### Mobile (Flutter)
+```env
+API_URL=https://api.seudominio.com
+```
 
 ## Testes
 
-[Descreva a estratégia de teste, incluindo os tipos de teste a serem realizados (unitários, integração, carga, etc.) e as ferramentas a serem utilizadas.]
+## Estratégia de Testes do Aplicativo Mobile (Flutter Web - VSCode/Chrome)
 
-1. Crie casos de teste para cobrir todos os requisitos funcionais e não funcionais da aplicação.
-2. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
-3. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
-4. Execute testes de carga para avaliar o desempenho da aplicação sob carga significativa.
-5. Utilize ferramentas de teste adequadas, como frameworks de teste e ferramentas de automação de teste, para agilizar o processo de teste.
+Durante a fase inicial de validação funcional do aplicativo mobile, foi adotada uma estratégia de testes utilizando a execução local por meio do comando `flutter run`, com destino ao navegador **Chrome**, via **Visual Studio Code**.
+
+Essa abordagem permitiu simular a experiência do usuário de forma ágil, especialmente útil para validar a interface, navegação e comunicação com a API.
+
+---
+
+### Ambiente de Testes
+
+- **Editor**: Visual Studio Code
+- **Comando de execução**: `flutter run -d chrome`
+- **Plataforma de destino**: Navegador Web (Chrome)
+- **Ambiente de backend**: API ASP.NET rodando localmente ou hospedada na nuvem (Azure/AWS)
+- **Banco de dados**: SQL Server Express, acessado pela API
+
+---
+
+### Tipos de Testes Realizados
+
+| Tipo de Teste            | Descrição                                                                 |
+|--------------------------|---------------------------------------------------------------------------|
+| Teste Funcional          | Verificação do comportamento esperado das funcionalidades principais     |
+| Teste de Navegação       | Checagem de fluxos entre telas (login, reserva, perfil, etc.)            |
+| Teste de Interface       | Validação visual dos componentes (botões, formulários, listas, etc.)     |
+| Teste de Integração API  | Simulação de requisições reais para a API (login, cadastro, reservas)    |
+| Teste de Formulário      | Verificação de validações de campos obrigatórios, formatos e mensagens   |
+
+---
+
+### Casos de Teste Exemplares
+
+1. **Login com credenciais válidas**
+   - Entrar com e-mail e senha válidos
+   - Esperado: Redirecionamento para a tela inicial do usuário
+
+2. **Reserva de uma mesa**
+   - Selecionar data, horário e mesa
+   - Confirmar reserva
+   - Esperado: Exibição de mensagem de sucesso e inclusão na lista de reservas
+
+3. **Validação de campos obrigatórios**
+   - Tentar salvar reserva sem data
+   - Esperado: Exibição de erro informando campo obrigatório
+
+4. **Atualização de perfil**
+   - Alterar nome ou e-mail
+   - Esperado: Dados atualizados após confirmação
+
+---
+
+### Limitações da Estratégia
+
+- O teste via Chrome não representa com total fidelidade o comportamento em dispositivos móveis (iOS/Android)
+- Algumas funcionalidades específicas de mobile (notificações push, câmera, sensores) não são testáveis via web
+- Diferenças de layout/responsividade entre web e dispositivos móveis podem existir
+
+---
+
+### Conclusão
+
+Essa estratégia de testes via `flutter run` no Chrome se mostrou eficaz para validar funcionalidades principais e a integração com o backend. Para garantir qualidade total, é recomendada uma fase posterior de testes em dispositivos físicos ou emuladores Android/iOS.
+A execução dos testes segue no documento em PDF na pasta docs conforme link abaixo.
+
+
 
 # Referências
 
