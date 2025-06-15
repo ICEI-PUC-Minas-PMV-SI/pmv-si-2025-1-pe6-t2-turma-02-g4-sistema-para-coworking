@@ -247,10 +247,51 @@ Essa abordagem permitiu simular a experiência do usuário de forma ágil, espec
 ### Conclusão
 
 Essa estratégia de testes via `flutter run` no Chrome se mostrou eficaz para validar funcionalidades principais e a integração com o backend. Para garantir qualidade total, é recomendada uma fase posterior de testes em dispositivos físicos ou emuladores Android/iOS.
-A execução dos testes segue no documento em PDF na pasta docs conforme link abaixo.
 
+A execução dos testes segue no documento em PDF na pasta docs conforme link abaixo.
+[📄 Testes Coworking Mobile (PDF)](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/blob/main/docs/Testes%20Coworking%20Mobile.pdf)
+[📥 Baixar Testes Coworking Mobile (PDF)](https://raw.githubusercontent.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe6-t2-turma-02-g4-sistema-para-coworking/main/docs/Testes%20Coworking%20Mobile.pdf)
 
 
 # Referências
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
+## 📚 Referências Bibliográficas
+
+- ALUR, R. et al. *Principles of Web Design and Application Development*. Springer, 2020.
+
+- FREEMAN, Eric; FREEMAN, Elisabeth. *Use a Cabeça!: Padrões de Projetos*. Alta Books, 2ª edição, 2021.
+
+- TROELSEN, Andrew; JAPIKSE, Philip. *Pro C# 10 with .NET 6: Foundational Principles and Practices in Programming*. Apress, 2022.
+
+- LIBERTI, Alberto. *Desenvolvimento de APIs REST com ASP.NET Core*. Casa do Código, 2022.  
+  [https://www.casadocodigo.com.br/products/livro-aspnet-core](https://www.casadocodigo.com.br/products/livro-aspnet-core)
+
+- ECKSTEIN, Robert. *Flutter for Beginners: An Introductory Guide to Building Cross-Platform Mobile Applications with Flutter and Dart 2*. Packt Publishing, 2020.
+
+- WILLIAMS, Ben. *Full-Stack React Projects*. Packt Publishing, 2ª edição, 2022.
+
+- Microsoft Docs. *ASP.NET Core Documentation*.  
+  [https://learn.microsoft.com/en-us/aspnet/core/](https://learn.microsoft.com/en-us/aspnet/core/)
+
+- Flutter Docs. *Flutter – Beautiful native apps in record time*.  
+  [https://flutter.dev/docs](https://flutter.dev/docs)
+
+- ReactJS Docs. *React – A JavaScript library for building user interfaces*.  
+  [https://reactjs.org/docs/getting-started.html](https://reactjs.org/docs/getting-started.html)
+
+- Microsoft Learn. *SQL Server Documentation*.  
+  [https://learn.microsoft.com/en-us/sql/sql-server/](https://learn.microsoft.com/en-us/sql/sql-server/)
+
+- AWS Docs. *Amazon EC2 e Amazon RDS Documentation*.  
+  [https://docs.aws.amazon.com/](https://docs.aws.amazon.com/)
+
+- Microsoft Azure. *Guia de início rápido para App Services e Azure SQL Database*.  
+  [https://learn.microsoft.com/pt-br/azure/app-service/](https://learn.microsoft.com/pt-br/azure/app-service/)
+
+- FIELDING, Roy T. *Architectural Styles and the Design of Network-based Software Architectures*. University of California, 2000.  
+  [https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
+
+- ISO/IEC. *ISO/IEC 25010:2011 – Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE)*.  
+  [https://iso.org/standard/35733.html](https://iso.org/standard/35733.html)
+
+
